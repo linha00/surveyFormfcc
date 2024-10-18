@@ -1,0 +1,101 @@
+body {
+    background: #f9f9f9;
+    display: flex;
+    height: 100vh;
+}
+
+h1, label {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: -10px;
+}
+
+form {
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    width: 80%;
+    padding: 30px;
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1),
+    -10px -10px 10px white;
+}
+
+left, right {
+    flex: 1;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 380px;
+    /* background-color: red; */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+label:not(.input-label) {
+    font-size: 1.3em;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1000px) {
+    form {
+      flex-direction: column; /* Stack the divs vertically */
+      align-items: center;
+      justify-content: center;
+    }
+
+    .left, .right {
+      width: 100%; /* Make sure each div takes full width */
+    }
+
+    fieldset {
+        width: 100%;
+    }
+}
+
+#comments {
+    min-width: 400px;  
+    max-height: 170px;
+    resize: none;
+    height: 170px;
+    width: 100%;      
+    padding: 10px;    
+    font-size: 1.3em;    
+    box-sizing: border-box;
+}
+
+
+#submit {
+    width: 80%;
+    margin: auto;
+    padding: 5px;
+    font-size: 1.5em;
+    border: 0;
+    border-radius: 0.2em;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#submit:hover {
+    background-color: #333;
+    color: #fff;
+
+}
